@@ -28,3 +28,11 @@ function initializeClock(endTime)
 
         total <= 0 && clearInterval(timeInterval);
     }
+
+
+    updateClock();
+    const timeInterval = setInterval(updateClock, 1000);
+}
+
+const deadline = new Date(Date.parse(new Date()) + 7 * 24 * 60 * 60 * 1000);
+initializeClock(deadline);
